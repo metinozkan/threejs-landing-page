@@ -42,8 +42,8 @@ export default function App() {
         <Suspense fallback={null}>
           {/* <Shoe scale={0.225} position={[0, -0.09, 0]} /> */}
 
-          {/* <Mercedes /> */}
-          <Shoe scale={0.225} position={[0, -0.09, 0]} />
+          <Mercedes scale={0.325} position={[0, -0.2, 0]} />
+          {/* <Shoe scale={0.225} position={[0, -0.09, 0]} /> */}
           <ContactShadows
             frames={1}
             rotation-x={[Math.PI / 2]}

@@ -12,7 +12,7 @@ const Grid = styled.div`
   font-family: "ThunderBlack";
   font-size: 4em;
   line-height: 0.74em;
-  color: #f7f4af;
+  color: #ea7a36;
 
   @media (max-width: 425px) {
     grid-template-columns: 1fr;
@@ -23,6 +23,7 @@ const Left = styled.div`
   position: relative;
   display: grid;
   grid-template-rows: 1fr auto;
+  align-items: center;
   width: 100%;
   height: 100%;
   padding: 100px;
@@ -39,15 +40,24 @@ const Right = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  background: #f7f4af;
+  background: #ea7a36;
   color: #252525;
+`;
+
+const RightContent = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #252525;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const Sub = styled.div`
   align-self: end;
   width: 200px;
   height: 2px;
-  background: #f7f4af;
+  background: #ea7a36;
 `;
 
 const Jumbo = styled.div`
@@ -80,21 +90,13 @@ export default function Underlay() {
   return (
     <Grid>
       <Left>
-        <div>
-          THE SISTRUM
-          <br />
-          IS DESIGNED
-          <br />
-          TO REPRESENT
-          <br />
-          CONTINUAL
-          <br />
-          AGITATION.
-        </div>
+        <div style={{}}>Mercedes-benz</div>
         <Sub />
       </Left>
       <Right>
-        <Jumbo>M1</Jumbo>
+        <RightContent>
+          <Jumbo>G</Jumbo>
+        </RightContent>
       </Right>
     </Grid>
   );
