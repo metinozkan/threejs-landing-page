@@ -4,6 +4,8 @@ import { ContactShadows, useGLTF, OrbitControls } from "@react-three/drei";
 import { Mercedes } from "./Mercedes";
 import Underlay from "./Underlay";
 import { Shoe } from "./Shoe";
+import MovingSpot from "./components/MovingSpot";
+import { useDepthBuffer } from "@react-three/drei";
 
 useGLTF.preload("/shoe-draco.glb");
 
@@ -13,7 +15,10 @@ export default function App() {
       <Underlay />
 
       <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 1.1], fov: 50 }}>
+        <fog attach="fog" args={["#202020", 5, 20]} />
         <ambientLight intensity={2} />
+        {/* <MovingSpot color="#0c8cbf" position={[3, 3, 2]} /> */}
+        <MovingSpot color="#ea7a36" position={[1, 3, 0]} />
         <spotLight
           position={[1, 6, 1.5]}
           angle={0.2}
