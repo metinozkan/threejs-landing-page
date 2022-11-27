@@ -16,9 +16,9 @@ export default function App() {
 
       <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 1.1], fov: 50 }}>
         <fog attach="fog" args={["#202020", 5, 20]} />
-        <ambientLight intensity={2} />
+        <ambientLight intensity={1} />
         {/* <MovingSpot color="#0c8cbf" position={[3, 3, 2]} /> */}
-        <MovingSpot color="#ea7a36" position={[1, 3, 0]} />
+        {/* <MovingSpot color="#ea7a36" position={[1, 3, 0]} /> */}
         <spotLight
           position={[1, 6, 1.5]}
           angle={0.2}
@@ -26,6 +26,7 @@ export default function App() {
           intensity={2.5}
           castShadow
           shadow-mapSize={[2048, 2048]}
+          color="#ffffc0"
         />
         <spotLight
           position={[-5, 5, -1.5]}
@@ -34,7 +35,9 @@ export default function App() {
           intensity={4}
           castShadow
           shadow-mapSize={[1024, 1024]}
+          color="#ffffc0"
         />
+
         <spotLight
           position={[5, 5, -5]}
           angle={0.3}
@@ -44,6 +47,9 @@ export default function App() {
           shadow-mapSize={[256, 256]}
           color="#ffffc0"
         />
+        <directionalLight position={[5, 0, 0]} intensity={4} color="#ffffc0" />
+        <directionalLight position={[2, -3, 3]} intensity={4} color="#ffffc0" />
+
         <Suspense fallback={null}>
           {/* <Shoe scale={0.225} position={[0, -0.09, 0]} /> */}
 
