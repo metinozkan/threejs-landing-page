@@ -6,6 +6,7 @@ import Underlay from "./Underlay";
 import { Shoe } from "./Shoe";
 import MovingSpot from "./components/MovingSpot";
 import { useDepthBuffer } from "@react-three/drei";
+import Loading from "./components/Loading";
 
 useGLTF.preload("/shoe-draco.glb");
 
@@ -50,7 +51,7 @@ export default function App() {
         <directionalLight position={[5, 0, 0]} intensity={4} color="#ffffc0" />
         <directionalLight position={[2, -3, 3]} intensity={4} color="#ffffc0" />
 
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loading />}>
           {/* <Shoe scale={0.225} position={[0, -0.09, 0]} /> */}
 
           <Mercedes scale={0.325} position={[0, -0.2, 0]} />
