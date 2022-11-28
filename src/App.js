@@ -4,6 +4,7 @@ import { ContactShadows, useGLTF, OrbitControls } from "@react-three/drei";
 import { Mercedes } from "./Mercedes";
 import Underlay from "./Underlay";
 import { Shoe } from "./Shoe";
+import Loading from "./components/Loading";
 
 useGLTF.preload("/shoe-draco.glb");
 
@@ -39,7 +40,7 @@ export default function App() {
           shadow-mapSize={[256, 256]}
           color="#ffffc0"
         />
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loading />}>
           {/* <Shoe scale={0.225} position={[0, -0.09, 0]} /> */}
 
           {/* <Mercedes /> */}
